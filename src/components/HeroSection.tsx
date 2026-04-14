@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Users } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -19,16 +19,15 @@ export default function HeroSection() {
           <p className="text-sm sm:text-base font-semibold tracking-widest uppercase text-muted-foreground mb-4">
             TKM College of Engineering
           </p>
-          <h1 className="text-4xl sm:text-6xl lg:text-8xl font-extrabold leading-[0.95] tracking-tight">
-            <span className="text-gradient-sunset">Become a part</span>
+          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold leading-[0.95] tracking-tight">
+            <span className="text-gradient-sunset">Your Gateway to TKMCE:</span>
             <br />
-            <span className="text-foreground">of the history</span>
+            <span className="text-foreground">Official KEAM</span>
             <br />
-            <span className="text-gradient-sunset">of TKM.</span>
+            <span className="text-gradient-sunset">Help Desk 2026.</span>
           </h1>
-          <p className="mt-6 sm:mt-8 text-base sm:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Pragathi College Union 2026 — where tradition meets ambition.
-            Join a legacy of excellence, creativity, and student empowerment.
+          <p className="mt-6 sm:mt-8 text-base sm:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed font-medium">
+            Run by Pragathi College Union. For the Students, By the Students.
           </p>
         </motion.div>
 
@@ -39,17 +38,18 @@ export default function HeroSection() {
           className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="#events"
+            href="#resources"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-sunset text-primary-foreground font-bold text-base shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
-            Explore Events
+            Access Mock Tests
             <ArrowRight className="w-4 h-4" />
           </a>
           <a
-            href="#academics"
+            href="#contacts"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-border text-foreground font-bold text-base hover:bg-accent transition-colors"
           >
-            Academic Hub
+            <Users className="w-4 h-4" />
+            Join Aspirant Community
           </a>
         </motion.div>
       </div>
