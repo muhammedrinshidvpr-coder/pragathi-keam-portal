@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
-import { Globe, ExternalLink } from "lucide-react";
+import { Globe } from "lucide-react";
 
 export default function Footer() {
   const [links, setLinks] = useState<Tables<"social_links">[]>([]);
@@ -19,10 +19,10 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center gap-6">
           <div>
             <h3 className="text-xl font-extrabold text-gradient-sunset">
-              Pragathi 2026
+              KEAM Help Desk 2026
             </h3>
             <p className="text-sm text-background/60 mt-1">
-              TKM College of Engineering — College Union
+              Pragathi College Union — TKM College of Engineering
             </p>
           </div>
 

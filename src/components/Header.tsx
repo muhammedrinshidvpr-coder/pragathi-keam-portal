@@ -22,11 +22,11 @@ export default function Header() {
           </Link>
 
           <div className="text-center">
-            <h2 className="text-lg sm:text-2xl font-extrabold tracking-tight text-gradient-sunset">
-              Pragathi 2026
+            <h2 className="text-base sm:text-xl font-extrabold tracking-tight text-gradient-sunset">
+              KEAM Help Desk 2026
             </h2>
             <p className="text-[10px] sm:text-xs font-medium text-muted-foreground tracking-widest uppercase">
-              College Union
+              Pragathi College Union
             </p>
           </div>
 

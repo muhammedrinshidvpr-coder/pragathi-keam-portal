@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { CalendarDays, Users, BookOpen, Link2, LogOut } from "lucide-react";
+import { Bell, Users, BookOpen, Link2, TrendingUp, LogOut } from "lucide-react";
 import ManageEvents from "./ManageEvents";
 import ManageContacts from "./ManageContacts";
 import ManageResources from "./ManageResources";
 import ManageSocials from "./ManageSocials";
+import ManageCutoffs from "./ManageCutoffs";
 
 const tabs = [
-  { key: "events", label: "Events", icon: CalendarDays },
+  { key: "events", label: "KEAM Alerts", icon: Bell },
+  { key: "cutoffs", label: "Cut-Off Ranks", icon: TrendingUp },
+  { key: "resources", label: "KEAM Resources", icon: BookOpen },
   { key: "contacts", label: "Contacts", icon: Users },
-  { key: "resources", label: "Resources", icon: BookOpen },
   { key: "socials", label: "Socials", icon: Link2 },
 ] as const;
 
@@ -25,11 +27,10 @@ export default function AdminDashboard({ onLogout }: { onLogout: () => void }) {
 
   return (
     <div className="min-h-screen bg-background flex">
-      {/* Sidebar */}
       <aside className="w-16 sm:w-56 bg-card border-r border-border flex flex-col shrink-0">
         <div className="p-4 border-b border-border hidden sm:block">
           <h2 className="text-lg font-extrabold text-gradient-sunset">Admin</h2>
-          <p className="text-xs text-muted-foreground">Pragathi 2026</p>
+          <p className="text-xs text-muted-foreground">KEAM Help Desk</p>
         </div>
         <nav className="flex-1 p-2 space-y-1">
           {tabs.map(({ key, label, icon: Icon }) => (
@@ -58,11 +59,11 @@ export default function AdminDashboard({ onLogout }: { onLogout: () => void }) {
         </div>
       </aside>
 
-      {/* Main */}
       <main className="flex-1 p-4 sm:p-8 overflow-auto">
         {active === "events" && <ManageEvents />}
-        {active === "contacts" && <ManageContacts />}
+        {active === "cutoffs" && <ManageCutoffs />}
         {active === "resources" && <ManageResources />}
+        {active === "contacts" && <ManageContacts />}
         {active === "socials" && <ManageSocials />}
       </main>
     </div>

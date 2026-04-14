@@ -69,9 +69,9 @@ export default function ManageEvents() {
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-extrabold text-foreground">Manage Events</h2>
+        <h2 className="text-2xl font-extrabold text-foreground">Manage KEAM Alerts</h2>
         <button onClick={() => { setAdding(!adding); resetForm(); }} className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-sunset text-primary-foreground text-sm font-semibold">
-          <Plus className="w-4 h-4" /> Add Event
+          <Plus className="w-4 h-4" /> Add Alert
         </button>
       </div>
 
