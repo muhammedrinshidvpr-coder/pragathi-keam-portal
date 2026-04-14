@@ -31,16 +31,29 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Pragathi 2026 — TKM College Union" },
+      { name: "description", content: "Official portal for Pragathi College Union 2026 at TKM College of Engineering" },
+      { name: "author", content: "Pragathi College Union" },
+      { property: "og:title", content: "Pragathi 2026 — TKM College Union" },
+      { property: "og:description", content: "Become a part of the history of TKM" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous" as const,
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
