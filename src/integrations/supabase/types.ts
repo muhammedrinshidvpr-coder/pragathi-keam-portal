@@ -14,7 +14,114 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      academic_resources: {
+        Row: {
+          created_at: string
+          file_url: string
+          id: string
+          resource_type: string
+          subject: string
+          title: string | null
+        }
+        Insert: {
+          created_at?: string
+          file_url: string
+          id?: string
+          resource_type?: string
+          subject: string
+          title?: string | null
+        }
+        Update: {
+          created_at?: string
+          file_url?: string
+          id?: string
+          resource_type?: string
+          subject?: string
+          title?: string | null
+        }
+        Relationships: []
+      }
+      contacts: {
+        Row: {
+          created_at: string
+          email: string | null
+          id: string
+          name: string
+          phone_number: string | null
+          role: string
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          id?: string
+          name: string
+          phone_number?: string | null
+          role?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          id?: string
+          name?: string
+          phone_number?: string | null
+          role?: string
+        }
+        Relationships: []
+      }
+      events: {
+        Row: {
+          created_at: string
+          description: string | null
+          event_date: string | null
+          id: string
+          image_url: string | null
+          registration_link: string | null
+          title: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          event_date?: string | null
+          id?: string
+          image_url?: string | null
+          registration_link?: string | null
+          title: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          event_date?: string | null
+          id?: string
+          image_url?: string | null
+          registration_link?: string | null
+          title?: string
+        }
+        Relationships: []
+      }
+      social_links: {
+        Row: {
+          created_at: string
+          icon_identifier: string | null
+          id: string
+          platform_name: string
+          url: string
+        }
+        Insert: {
+          created_at?: string
+          icon_identifier?: string | null
+          id?: string
+          platform_name: string
+          url: string
+        }
+        Update: {
+          created_at?: string
+          icon_identifier?: string | null
+          id?: string
+          platform_name?: string
+          url?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
