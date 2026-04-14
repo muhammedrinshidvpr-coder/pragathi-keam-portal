@@ -38,12 +38,12 @@ export default function Header() {
             >
               Home
             </Link>
-            <Link
-              to="/admin"
+            <a
+              href="/admin"
               className="text-xs px-3 py-1.5 rounded-full bg-gradient-sunset text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
             >
               Admin
-            </Link>
+            </a>
           </nav>
         </div>
       </div>

@@ -1,23 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
-import {
-  Instagram,
-  Twitter,
-  Facebook,
-  Youtube,
-  Linkedin,
-  Globe,
-  type LucideIcon,
-} from "lucide-react";
-
-const iconMap: Record<string, LucideIcon> = {
-  instagram: Instagram,
-  twitter: Twitter,
-  facebook: Facebook,
-  youtube: Youtube,
-  linkedin: Linkedin,
-};
+import { Globe, ExternalLink } from "lucide-react";
 
 export default function Footer() {
   const [links, setLinks] = useState<Tables<"social_links">[]>([]);
@@ -44,22 +28,19 @@ export default function Footer() {
 
           {links.length > 0 && (
             <div className="flex gap-4">
-              {links.map((link) => {
-                const Icon =
-                  iconMap[link.icon_identifier?.toLowerCase() ?? ""] ?? Globe;
-                return (
-                  <a
-                    key={link.id}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors"
-                    aria-label={link.platform_name}
-                  >
-                    <Icon className="w-4 h-4" />
-                  </a>
-                );
-              })}
+              {links.map((link) => (
+                <a
+                  key={link.id}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background/10 hover:bg-background/20 text-sm transition-colors"
+                  aria-label={link.platform_name}
+                >
+                  <Globe className="w-3.5 h-3.5" />
+                  {link.platform_name}
+                </a>
+              ))}
             </div>
           )}
 
