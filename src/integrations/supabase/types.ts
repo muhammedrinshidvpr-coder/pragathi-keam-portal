@@ -68,6 +68,39 @@ export type Database = {
         }
         Relationships: []
       }
+      cutoff_ranks: {
+        Row: {
+          branch: string
+          created_at: string
+          general_rank: number | null
+          id: string
+          obc_rank: number | null
+          sc_rank: number | null
+          st_rank: number | null
+          year: number
+        }
+        Insert: {
+          branch: string
+          created_at?: string
+          general_rank?: number | null
+          id?: string
+          obc_rank?: number | null
+          sc_rank?: number | null
+          st_rank?: number | null
+          year: number
+        }
+        Update: {
+          branch?: string
+          created_at?: string
+          general_rank?: number | null
+          id?: string
+          obc_rank?: number | null
+          sc_rank?: number | null
+          st_rank?: number | null
+          year?: number
+        }
+        Relationships: []
+      }
       events: {
         Row: {
           created_at: string
