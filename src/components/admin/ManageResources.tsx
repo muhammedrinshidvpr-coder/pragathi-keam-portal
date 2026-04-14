@@ -46,7 +46,7 @@ export default function ManageResources() {
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-extrabold text-foreground">Manage Resources</h2>
+        <h2 className="text-2xl font-extrabold text-foreground">Manage KEAM Resources</h2>
         <button onClick={() => { setAdding(!adding); resetForm(); }} className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-sunset text-primary-foreground text-sm font-semibold"><Plus className="w-4 h-4" /> Add Resource</button>
       </div>
 
@@ -56,7 +56,7 @@ export default function ManageResources() {
             <input placeholder="Title" value={form.title} onChange={e => setForm(p => ({ ...p, title: e.target.value }))} className="px-3 py-2 rounded-lg border border-input bg-background text-sm" />
             <input placeholder="Subject *" value={form.subject} onChange={e => setForm(p => ({ ...p, subject: e.target.value }))} className="px-3 py-2 rounded-lg border border-input bg-background text-sm" />
             <select value={form.resource_type} onChange={e => setForm(p => ({ ...p, resource_type: e.target.value }))} className="px-3 py-2 rounded-lg border border-input bg-background text-sm">
-              <option>PYQ</option><option>Mock Test</option><option>Notes</option>
+              <option>PYQ</option><option>Mock Test</option><option>Notes</option><option>Formula Sheet</option><option>High-Yield Topics</option>
             </select>
             <input placeholder="File URL *" value={form.file_url} onChange={e => setForm(p => ({ ...p, file_url: e.target.value }))} className="px-3 py-2 rounded-lg border border-input bg-background text-sm" />
           </div>
